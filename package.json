@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-risk-product",
+  "version": "1.0.0",
+  "description": "Personal Portfolio of an Analytical Product & Risk Manager",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}
