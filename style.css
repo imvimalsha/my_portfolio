@@ -1653,6 +1653,14 @@ a {
   
   .hero-text-content {
     align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .hero-graphic-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   
   .hero-title {
