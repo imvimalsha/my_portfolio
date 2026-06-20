@@ -1549,3 +1549,33 @@ async function openProjectDetailModal(projId) {
     console.error("Failed to open project detail modal:", err);
   }
 }
+
+// ==========================================================================
+// MOBILE MENU TOGGLE
+// ==========================================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+  const headerElement = document.querySelector('.glass-header');
+
+  if (mobileMenuToggle && headerElement) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      headerElement.classList.toggle('mobile-open');
+    });
+    
+    // Close mobile menu when clicking outside of the header
+    document.addEventListener('click', (e) => {
+      if (!headerElement.contains(e.target)) {
+        headerElement.classList.remove('mobile-open');
+      }
+    });
+
+    // Close menu when clicking on a nav link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        headerElement.classList.remove('mobile-open');
+      });
+    });
+  }
+});
